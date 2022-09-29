@@ -1,0 +1,48 @@
+  	
+						CURSO EM VIDEO
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+						
+						TIPOS PRIMITIVOS
+					------------------------------
+
+	NÚMERICOS	>> INTEIRO => tinyInt, smallint, int, mediumInt, bigInt 
+				// As diferenças desses é a capacidade de armarzenamento, isso influência diretamente no número que vc vai guardar
+			>> REAL => decimal,float, double, real
+			>> LÓGICO => bit, boolean
+	
+	DATA/TEMPO	=> date, dateTime, timeStamp, time, year	
+	
+
+	LITERAL		>> CARACTERE => char, varchar
+			>> TEXTO => tinyText, text, mediumText, longText // observações
+			>> BINÁRIO => tinyBlob, blob, mediumBlob, longBlob // guardar imagem
+			>> COLEÇÃO => enum, set // indicar valores permitidos
+
+
+	ESPACIAL	=> geometry, point, polygon, multiPolygon // permite guardar informações volumetricas
+
+
+
+						Parametros - CONSTRAINTS
+
+	CREATE DATABASE cadastro
+	DEFAULT CHARACTER SET utf8
+	DEFAULT COLLATE utf8_general_ci;
+
+	CREATE TABLE pessoas(
+		nome		VARCHAR(30) NOT NULL, //obriga a pessoa escrever
+		nascimento 	DATE,
+		sexo 		ENUM(`M`,`F`),
+		peso 		DECIMAL(5,2),
+		altura		DECIMAL(3,2),
+		nacionalidade	VARCHAR(20) DEFAULT `Brasil`// se ninguem digitar nada, por padrão será Brasil
+	)DEFAULT CHARSET = UTF8;
+
+			/* mysql workbench para deletar uma banco voce tem que abrir outra pagina e executar o codigo,
+			se você quer executar uma tabela, certifique-se de que vc abriu seu banco de dados */
+			
+
+
+
+
+
